@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop/providers/products.dart';
 import 'package:provider/provider.dart';
-import 'package:shop/screens/cart_screen.dart';
 
-import '../providers/products.dart';
+import '../screens/cart_screen.dart';
+
+import '../widgets/app_drawer.dart';
 import '../widgets/products_grid.dart';
 import '../widgets/badge.dart';
+
 import '../providers/cart.dart';
 
 enum FilterOptions { Favorites, ALL }
@@ -61,6 +62,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
         ],
       ),
       body: ProductsGrid(_showOnlyFavorites),
+      drawer: AppDrawer(),
     );
   }
 }
